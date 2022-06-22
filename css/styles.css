@@ -1,0 +1,387 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* Reset para REMS -62.5% = 10px de 16px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+}
+
+/** Utilidades **/
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw-300{
+    font-weight: 300;
+}
+.centrar-texto{
+    text-align: center;
+}
+.right-texto{
+    text-align: right;
+}
+.interlineado {
+    margin-bottom: 3rem;
+}
+
+/* Grid */ 
+.grid{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.centrar-columnas{
+    justify-content: center;
+}
+.columnas-10{
+    flex: 0 0 calc(83.3% - 1rem);
+}
+.columnas-12{
+    flex: 0 0 100%;
+}
+
+/** Botones **/
+.boton{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: inline-block;
+    text-align: center;
+    display: block;
+    flex: 0 0 100%;
+    border: none;
+}
+@media (min-width: 76.8rem){
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+.boton-blanco{
+    background-color: white;
+    color: #FFB347;
+    border-radius: 2rem;
+    text-transform: uppercase;
+}
+.boton-naranja{
+    background-color: #FFB347;
+    color: white;
+    cursor: pointer;
+}
+.boton:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/** Globales **/
+img{
+    max-width: 100%;
+}
+.contenedor{
+    width: 75%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 3.4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.6rem;
+}
+
+/* Heater*/
+.site-header.inicio {
+    background-image: url(../img/heather.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-width: 60rem;
+}
+.contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contenido-header h1{
+    text-align: center;
+    color: black;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+.contenido-header p{
+    text-align: center;
+    color: black;
+    padding-bottom: 25rem;
+    font-size: 2rem;
+    margin: 0;
+}
+.logo a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Gudea', sans-serif;
+}
+.logo h2{
+    font-weight: 700;
+    font-size: 4rem;
+    margin: 0;
+}
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+}
+.contenedor-titulo{
+    width: 50%;
+}
+.titulo-left{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Navegacion */
+.navegacion a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+}
+.navegacion a:hover{
+    color: #FFB347;
+}
+.navegacion a:last-of-type{
+    margin: 0;
+}
+
+/* Bienvenida */
+.bienvenida{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.bienvenida-imagen{
+    flex-basis: 50%;
+}
+.bienvenida-texto{
+    flex-basis: 50%;
+    background-color: #FFB347;
+}
+.contenedor-texto{
+    font-size: 2rem;
+    color: white;
+}
+.contenedor-texto span{
+    color: black;
+}
+.margen-texto{
+    margin: 0;
+}
+
+/* Blog */
+.contenedor-blog{
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-between;
+}
+.contenedor-blog a{
+    flex-basis: calc(33.3% - 1rem);
+}
+
+/* Footer */
+.site-footer{
+    background-image: url(../img/foother.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.contenido-foother{
+    flex: 1;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contenedor-foother p{
+    font-size: 8rem;
+}
+.contenedor-footer{
+    width: 30%;
+}
+
+/**** Iniciar Sesion ****/ 
+.formulario-sesion{
+    background-color: white;
+    padding: 5rem;
+}
+@media (min-width: 768px){
+    .formulario-sesion{
+        margin-top: -10rem;
+    }
+}
+.formulario-sesion .campo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.formulario-sesion .campo label {
+    flex: 0 0 10rem;
+}
+.formulario-sesion .campo input:not([type="submit"]){
+    flex: 1;
+    border: 1px solid  #e1e1e1;
+    padding: 1rem;
+}
+.formulario-sesion .campo select{
+    flex: 1;
+    border: 1px solid  #e1e1e1;
+    padding: 1rem;
+}
+.formulario-sesion .enviar{
+    display: flex;
+    justify-content: flex-end;
+}
+.registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registro a{
+    margin-left: 1rem;
+}
+
+.footer-content{
+    background-color: 	#FFB347;
+    margin: 0;
+    padding: 2rem 0;
+    color: white;
+}
+
+
+/**** Usuario ****/
+/* header */
+.site-usuario {
+    background-image: url(../img/usuario_6.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 30rem;
+}
+.contenedor-usuario{
+    color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contenedor-usuario h1{
+    padding-bottom: 8rem;
+}
+
+/* Contenido */
+.contenido-plan{
+    display: flex;
+    justify-content: space-between;
+}
+.contenedor-plan{
+    flex-basis: 60%;
+}
+.contenedor-calendario{
+    padding-top: 7rem;
+    flex-basis: calc(40% - 3rem);
+}
+.texto-plan p::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: .5rem;
+    background-color: #FFB347;
+    margin-top: 2rem;
+}
+.alinear-boton{
+    display: flex;
+    justify-content: flex-end;
+}
+.coins{
+    background-color: #FFB347;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.coins h3{
+    margin-right: 1rem;
+}
+
+/* footer */
+.padding-1{
+    padding-top: 0;
+}
+.navegacion.usuario a{
+    color: white;
+}
+.navegacion.usuario a:hover{
+    color: black;
+}
+
+/**** Obejtivos ****/
+.contenedor-progreso{
+    flex-basis: 46%;
+    margin-bottom: 5rem;
+}
+.contenedor-completos{
+    flex-basis: calc(54% - 10rem);
+    margin-bottom: 5rem;
+}
+.centrar-boton{
+    display: flex;
+    justify-content: center;
+}
+.texto-obj h3::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: .5rem;
+    background-color: #FFB347;
+    margin-top: 2rem;
+}
+
+/**** Objetivo particular ****/
+.contenedor-info{
+    flex-basis: 40%;
+    margin-bottom: 2rem;
+}
+.contenedor-estrategias{
+    flex-basis: calc(60% - 10rem);
+    margin-bottom: 2rem;
+}
+.info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.info label{
+    margin-right: 1rem;
+}
+.boton-grande{
+    display: block;
+    width: 100%;
+}
